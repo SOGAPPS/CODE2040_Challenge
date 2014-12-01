@@ -18,7 +18,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //[self Registeration];
-    [self getString];
+    //[self getString];
     //[self validateString];
    
 }
