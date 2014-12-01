@@ -17,6 +17,8 @@
 		00B625881A2A2F9000A271AF /* CODE2040_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B625871A2A2F9000A271AF /* CODE2040_ChallengeTests.m */; };
 		00B625971A2A8BF200A271AF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B625961A2A8BF200A271AF /* CFNetwork.framework */; };
 		00B62AB21A2C366200A271AF /* Stage_2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B62AB11A2C366200A271AF /* Stage_2VC.m */; };
+		00B62AB51A2C5EB300A271AF /* Stage_3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B62AB41A2C5EB300A271AF /* Stage_3VC.m */; };
+		00B62AB81A2C7BA400A271AF /* Stage_4VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B62AB71A2C7BA400A271AF /* Stage_4VC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		00B625961A2A8BF200A271AF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		00B62AB01A2C366200A271AF /* Stage_2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage_2VC.h; sourceTree = "<group>"; };
 		00B62AB11A2C366200A271AF /* Stage_2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stage_2VC.m; sourceTree = "<group>"; };
+		00B62AB31A2C5EB300A271AF /* Stage_3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage_3VC.h; sourceTree = "<group>"; };
+		00B62AB41A2C5EB300A271AF /* Stage_3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stage_3VC.m; sourceTree = "<group>"; };
+		00B62AB61A2C7BA400A271AF /* Stage_4VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage_4VC.h; sourceTree = "<group>"; };
+		00B62AB71A2C7BA400A271AF /* Stage_4VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stage_4VC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,10 @@
 				00B625731A2A2F9000A271AF /* Stage_1VC.m */,
 				00B62AB01A2C366200A271AF /* Stage_2VC.h */,
 				00B62AB11A2C366200A271AF /* Stage_2VC.m */,
+				00B62AB31A2C5EB300A271AF /* Stage_3VC.h */,
+				00B62AB41A2C5EB300A271AF /* Stage_3VC.m */,
+				00B62AB61A2C7BA400A271AF /* Stage_4VC.h */,
+				00B62AB71A2C7BA400A271AF /* Stage_4VC.m */,
 				00B625751A2A2F9000A271AF /* Main.storyboard */,
 				00B625781A2A2F9000A271AF /* Images.xcassets */,
 				00B6257A1A2A2F9000A271AF /* LaunchScreen.xib */,
@@ -234,6 +244,8 @@
 				00B62AB21A2C366200A271AF /* Stage_2VC.m in Sources */,
 				00B625711A2A2F9000A271AF /* CODE2040_Challenge.xcdatamodeld in Sources */,
 				00B6256E1A2A2F9000A271AF /* AppDelegate.m in Sources */,
+				00B62AB81A2C7BA400A271AF /* Stage_4VC.m in Sources */,
+				00B62AB51A2C5EB300A271AF /* Stage_3VC.m in Sources */,
 				00B625741A2A2F9000A271AF /* Stage_1VC.m in Sources */,
 				00B6256B1A2A2F9000A271AF /* main.m in Sources */,
 			);

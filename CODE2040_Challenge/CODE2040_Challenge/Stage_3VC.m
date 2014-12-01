@@ -1,25 +1,24 @@
 //
-//  Stage_2VC.m
+//  Stage_3VC.m
 //  CODE2040_Challenge
 //
 //  Created by PrinceSegs on 01/12/2014.
 //  Copyright (c) 2014 SOG APPS. All rights reserved.
 //
 
-#import "Stage_2VC.h"
+#import "Stage_3VC.h"
 
-@interface Stage_2VC ()
+@interface Stage_3VC ()
 
 @end
 
-@implementation Stage_2VC
+@implementation Stage_3VC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self hayStack];
-
+    //[self prefix];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,9 +27,9 @@
 }
 
 
--(void)hayStack{
+-(void)prefix{
     
-    // Get hayStack
+    // Get prefix
     
     
     NSError* errorJson = nil;
@@ -43,7 +42,7 @@
     
     //URL
     
-    NSURL *url = [NSURL URLWithString:@"http://challenge.code2040.org/api/haystack"];
+    NSURL *url = [NSURL URLWithString:@"http://challenge.code2040.org/api/prefix"];
     
     //Now we have what we'd like to post. We can create an NSMutableURLRequest, and include our postData.
     
@@ -71,35 +70,39 @@
     // initialString
     NSData *data = [requestReply dataUsingEncoding:NSUTF8StringEncoding];
     id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-
+    
     NSString *value = [json objectForKey:@"result"];
-    NSString *value2 = [value valueForKey:@"needle"];
-    NSString *value3 = [value valueForKey:@"haystack"];
-    NSArray *value3Array = value3;
-
-// indexOfObject Method is used to identify the string 'needle' in array 'haystack'
-    NSUInteger indexOfTheObject = [value3Array indexOfObject:value2];
-
+    NSString *value2 = [value valueForKey:@"prefix"];
+    NSString *value3 = [value valueForKey:@"array"];
+    NSArray *value3Array = @[value3];
+    NSArray *value2Array = @[value2];
     
     
-    //NSLog(@"needle: %@",value3);
-    //NSLog(@"HaystackArray: %@",value2Array);
-    NSLog(@"position: %d",indexOfTheObject);
+    NSArray *arr = [NSArray arrayWithObjects:[NSArray arrayWithObjects:@"299-1-1", nil],[NSArray arrayWithObjects:@"399-1-1", nil],[NSArray arrayWithObjects:@"499-1-1", nil], nil];
     
-    //Converts NSInteger to NSString
-    NSString *inStr = [NSString stringWithFormat: @"%ld", (long)indexOfTheObject];
+    NSString *search = @"299";
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ALL SELF contains[cd] %@", value2];
+    NSArray* array = [value3Array filteredArrayUsingPredicate: predicate];
+    //NSLog(@"result: %@", array);
+    
+  
+    NSLog(@"prefix: %@",value2);
+    NSLog(@"Array: %@",value3Array);
+    NSLog(@"filteredArray: %@",array);
     
     
-    [self validateString:inStr];
-
+    
+    //[self validatePrefix:array];
+    
 }
 
--(void)validateString: (NSString *)position{
-    // Get Neetdle
+-(void)validatePrefix: (NSArray *)newArray{
+    // Get Prefix
     
     
     NSError* errorJson = nil;
-    NSDictionary* jsonDict = @{@"token" : @"hKYs6KjVwf" , @"needle" : position};
+    NSDictionary* jsonDict = @{@"token" : @"hKYs6KjVwf" , @"array" : newArray};
     NSData* postData = [NSJSONSerialization dataWithJSONObject:jsonDict options:kNilOptions error:&errorJson];
     
     
@@ -108,7 +111,7 @@
     
     //URL
     
-    NSURL *url = [NSURL URLWithString:@"http://challenge.code2040.org/api/validateneedle"];
+    NSURL *url = [NSURL URLWithString:@"http://challenge.code2040.org/api/validateprefix"];
     
     //Now we have what we'd like to post. We can create an NSMutableURLRequest, and include our postData.
     
@@ -131,10 +134,8 @@
     
     NSString *requestReply = [[NSString alloc] initWithBytes:[requestHandler bytes] length:[requestHandler length] encoding:NSASCIIStringEncoding];
     
-    NSLog(@"Validate String: %@", requestReply);
+    NSLog(@"Validate Prefix: %@", requestReply);
     
 }
-
-
 
 @end
