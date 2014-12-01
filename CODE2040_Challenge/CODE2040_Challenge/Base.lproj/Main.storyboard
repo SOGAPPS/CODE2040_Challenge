@@ -33,7 +33,7 @@
                                     <rect key="frame" x="110" y="346" width="101" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="reverseString:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ibn-Ct-x8k"/>
+                                    <action selector="reverseStringButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Kp9-iB-13V"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter String:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TD-u2-bgN">

@@ -14,17 +14,24 @@
 @interface Stage_1VC : UIViewController <UITextFieldDelegate> 
 
 
+@property (strong, nonatomic) NSString *initialString;
+@property (strong, nonatomic) NSString *reversedString;
+
+
+
 @property (weak, nonatomic)  NSString *userInput;
 @property (strong, nonatomic) NSString *initialToken;
 @property (strong, nonatomic) NSDictionary *savedToken;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
 @property (weak, nonatomic) IBOutlet UITextField *myReversedString;
 @property (weak, nonatomic) IBOutlet UILabel *tokenLabel;
 
-- (IBAction)reverseString:(UIButton *)sender;
+- (IBAction)reverseStringButton:(UIButton *)sender;
 
 - (id)jsonPostRequest:(NSData *)jsonRequestData;
+
 
 
 @end
