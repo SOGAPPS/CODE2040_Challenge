@@ -15,6 +15,7 @@
 		00B625791A2A2F9000A271AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B625781A2A2F9000A271AF /* Images.xcassets */; };
 		00B6257C1A2A2F9000A271AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B6257A1A2A2F9000A271AF /* LaunchScreen.xib */; };
 		00B625881A2A2F9000A271AF /* CODE2040_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B625871A2A2F9000A271AF /* CODE2040_ChallengeTests.m */; };
+		00B625971A2A8BF200A271AF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B625961A2A8BF200A271AF /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		00B625811A2A2F9000A271AF /* CODE2040_ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CODE2040_ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B625861A2A2F9000A271AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00B625871A2A2F9000A271AF /* CODE2040_ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CODE2040_ChallengeTests.m; sourceTree = "<group>"; };
+		00B625961A2A8BF200A271AF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B625971A2A8BF200A271AF /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +68,7 @@
 		00B6255C1A2A2F8F00A271AF = {
 			isa = PBXGroup;
 			children = (
+				00B625961A2A8BF200A271AF /* CFNetwork.framework */,
 				00B625671A2A2F8F00A271AF /* CODE2040_Challenge */,
 				00B625841A2A2F9000A271AF /* CODE2040_ChallengeTests */,
 				00B625661A2A2F8F00A271AF /* Products */,
