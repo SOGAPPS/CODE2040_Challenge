@@ -71,19 +71,38 @@
     id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     
     NSString *value = [json objectForKey:@"result"];
-    NSString *value2 = [value valueForKey:@"prefix"];
-    NSString *value3 = [value valueForKey:@"array"];
-    NSArray *value3Array = @[value3];
+    NSString *value2 = [value valueForKey:@"datestamp"];
+    NSString *value3 = [value valueForKey:@"interval"];
+    //NSArray *value3Array = @[value3];
+    
+    NSString *timeNow = @"2008-12-29T00:27:42GMT-08:00";
+    
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+    NSDate *myDate = [dateFormatter dateFromString:value2];
+    
+    //NSString *timeInt = [NSString stringWithFormat: @"%ld", (long)value3];
+
+    NSLog(@"DATE FORMAT:%@", myDate);
+    
+    NSDateFormatter *anotherDateFormatter = [[NSDateFormatter alloc] init];
+    [anotherDateFormatter setDateStyle:NSDateFormatterLongStyle];
+    [anotherDateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    NSLog(@"%@", [anotherDateFormatter stringFromDate:myDate]);
     
     
-    
-    //NSLog(@"prefix: %@",value2);
-    //NSLog(@"Array: %@",value3Array);
+
+    NSLog(@"datestamp: %@",value2);
+    NSLog(@"interval: %@",value3);
     //NSLog(@"filteredArray: %@",array);
     
     
     
     //[self validatePrefix:array];
+    
+    
+    
     
 }
 
